@@ -1,0 +1,306 @@
+<html>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>CLoudLink - becuase your data, is yours</title>
+    <meta name="author" content="David Vassallo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="./css/impress.css" rel="stylesheet" />
+
+</head>
+
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <div class="step" data-x="0" data-y="0">
+        <h1>Introducing the team</h1>
+    </div>
+
+
+    <div class="step slide" data-x="1000" data-y="0">
+        <ul>
+            <li><strong>Brian - Visionary</strong> <hr> <div class="center-image"><img src="img/brian.png"/></li>
+            <li><strong>Isaac - Project Manager</strong> <hr> <div class="center-image"><img src="x"/></li>
+        </ul>
+    </div>
+    
+    <div class="step slide" data-x="2000" data-y="0">
+        <ul>
+            <li><strong>Matthew - Architect</strong> <hr> <div class="center-image"><img class="small" src="img/matt.png"/></li>
+            <li><strong>David - Architect</strong> <hr> <div class="center-image"><img class="small" src="img/dave.png"/></li>
+            <li><strong>Ryan - Developer</strong> <hr> <div class="center-image"><img class="small" src="img/ryan.png"/></li>
+        </ul>
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="-1000" data-scale="4">
+        <span >bringing you...</span>
+        <h1>CloudLink</h1>
+    </div>
+
+    <!--
+        
+        This element introduces rotation.
+        
+        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+        element should be rotated by 90 degrees clockwise.
+        
+    -->
+    <div class="step" data-x="850" data-y="3000" data-rotate="90">
+        <p>Let's look at the current state of affairs in
+            <strong> Cloud Sharing and Collaboration</strong>
+            ...
+        </p>
+    </div>
+    
+    <div class="step" data-x="850" data-y="4000" data-rotate="90">
+        <ul>
+            <li>Businesses depend on communication and data sharing.</li>
+            <li>Advances in communication have revolutionised business processes. For example:
+                <ul>
+                    <li>Email</li>
+                    <li>Skype</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="step" data-x="850" data-y="5500" data-rotate="90">
+        <div>
+            <ul>
+                <li>Users piggyback communication techniques for file transfers.</li>
+                <li>However these techniques are:
+                    <ul>
+                        <li>Slow</li>
+                        <li>unsuitable for large file transfers</li>
+                        <li>inadequate for some transfers</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/inaqequate-1.png"/></div>
+    </div>
+    
+    <div class="step" data-x="850" data-y="7000" data-rotate="90">
+        <div>
+            <ul>
+                <li>The emergence of tablet computers and other mobile devices has increased the demand for cloud storage.</li>
+                <li>Your users want to be more efficient
+                    <ul>
+                        <li>They want access to their data anywhere and all the time.</li>
+                        <li>They want a simple way of sharing their information with others.</li>
+                        <li>They want to collaborate and work in teams.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+
+    <div class="step" data-x="12500" data-y="3100" data-rotate="180" data-scale="6">
+        Truth is… If you are not going to provide this convenience, users will simply help themselves!!
+        <img src="img/competition.png"/>
+    </div>
+
+    
+    <div class="step" data-x="3825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        why is this bad?<hr>
+        consider this <strong>true</strong> story...
+    </div>
+    
+    <div class="step" data-x="3825" data-y="4325" data-z="-3000" data-rotate="300" data-scale="1">
+        <li>Rob is a hard working employee.</li>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/rob_true.png"/></div>
+    </div>
+    
+    <div class="step" data-x="3825" data-y="5325" data-z="-3000" data-rotate="300" data-scale="1">
+        <li>He takes his laptop, tablet and mobile phone to every meeting.</li>
+        <li>He’s a closer and wants to make sure he has all the tools to get things done!</li>
+        <li>To make his life simpler he uses a free cloud storage service and saved his most important company documents there. </li>
+        <li>This ensures that he had everything he needs, whenever he needs it! </li>    
+    </div>
+    
+    <div class="step" data-x="3825" data-y="7325" data-z="-3000" data-rotate="300" data-scale="1">
+        Unfortunately, Rob is leaving the company, and not on very good terms. So…
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/unknown.png"/></div>
+    </div>
+    
+    <div class="step" data-x="3825" data-y="8325" data-z="-3000" data-rotate="300" data-scale="1">
+        <li>What is going to happen to the company information now sitting on Bobs’ personal cloud account?</li>
+        <li>Where is all this company information?</li>
+        <li>Will it be returned to the company?</li>
+        <li>Will it be removed from Rob’s personal cloud storage account?</li>
+        <li>Who has access?</li>
+        <li>Has this been shared with anyone?</li>
+    </div>
+
+    <div class="step" data-x="3500" data-y="-8550" data-rotate="270" data-scale="6">
+        <h2>Let's face it....</h2>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/network.png"/></div>
+    </div>
+    
+    <div class="step" data-x="3500" data-y="-15550" data-rotate="270" data-scale="6">
+        <li>You have spent a good deal of money to bring your architecture up to scratch.</li>
+        <li>You already have your security policies in place.</li>
+        <li>You have the ability to block such file sharing applications from your network but don’t do it because users will complain!</li>
+    </div>
+    
+    <div class="step" data-x="3500" data-y="-25550" data-rotate="270" data-scale="6">
+        <strong>So what if...</strong>
+        <hr>
+        You could leverage the power of your IT infrastructure to offer such an available and versatile cloud system to your users?
+    </div>
+    
+    
+    <div class="step" data-x="3500" data-y="-35550" data-rotate="270" data-scale="6">
+        <strong>So what if...</strong>
+        <hr>
+        <li>the cloud storage were to be your own file server?</li>
+        <li>access was still controlled via Microsoft Active Directory?</li>
+        <li>transmitted data were encrypted?</li>
+        <li>the system could sync with Windows, Mac, Linux, IOS, Android and Windows Mobile?</li>
+        <li>the system could track file versions and detect conflicts?</li>
+        <li>the system had a remote wipe functionality?</li>
+    </div>
+    
+    
+
+    <div class="step" data-x="15700" data-y="-1200" data-scale="6">
+        <div style="width: 100%;"><b style="text-align: center; display:block;">What if that product already exists?!</b></div>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/logo.png"/></div>
+    </div>
+
+    <div class="step" data-x="20700" data-y="-1200" data-scale="6">
+        <div style="width: 100%;"><b style="text-align: center; display:block;">What is cloudlink?</b></div>
+        <li>In simple terms CloudLink adds cloud functionality to your existing on premise file server.</li>
+        <li>It is a secure conduit between your fileserver and the internet.</li>
+        <li>Leverages the infrastructure you already have.</li>
+        <li>Allows you to control the use of third party cloud storage solutions, by offering an enterprise level replacement.</li>
+    </div>
+    
+    <div class="step" data-x="30700" data-y="-1200" data-scale="6">
+        CloudLink
+        <li>makes life easier
+            <li>making your files accessible
+                <li>
+                    Everywhere...
+                </li>
+            </li>
+        </li>
+    </div>
+
+    <div class="step" data-x="40700" data-y="-1200" data-scale="6">
+        <img style="height: 500px; width: 850px;" src="./img/wordcloud.png"/>
+    </div>
+
+    <div id="delivery" class="step" data-x="7500" data-y="4500" data-scale="2">
+        <b>How is cloudlink delivered to you?</b>
+    </div>
+
+
+    <div class="step" data-x="8000" data-y="5500" data-scale="2">
+        <b>Small physical appliance for up to 10 users</b>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/small.png"/></div>
+    </div>
+
+    <div class="step" data-x="10000" data-y="6500" data-scale="2">
+        <b>Small physical appliance for up to 10 users</b>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/physical.png"/></div>
+    </div>
+
+    <div class="step" data-x="12000" data-y="7500" data-scale="2">
+        <b>VMware Virtual App to make use of existing VMware infrastructure</b>
+        <div style="width: 100%"><img style="margin:auto; display: block;" src="./img/virtual.png"/></div>
+    </div>
+
+    <div class="step" data-x="15000" data-y="7500" data-z="50" data-rotate="90">
+        <b>Will it break the bank?</b>
+        <div style="width: 100%"><img style="height: 400px; width: 650px; margin:auto; display: block;" src="./img/pacmoney.jpg"/></div>
+    </div>
+
+    <div class="step" data-x="15000" data-y="8500" data-z="50" data-rotate="90">
+        <li>No monthly fees.</li>
+        <li>A three tier, easy to understand, per user pricing structure.</li>
+        <li>Annual maintenance for appliance updates and support.</li>
+        <li>Per user fee for CloudLink on premise or monthly for Hosted backup.</li>
+    </div>
+
+    <div class="step" data-x="15000" data-y="10500" data-rotate="270">
+        <b>Thank You!</b><br>
+        <em>Questions?</em>
+    </div>
+
+    
+    
+</div>
+
+    
+    <div class="hint">
+        <p>Use a spacebar or arrow keys to navigate</p>
+    </div>
+    <script>
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+    </script>
+
+
+    
+    
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
+    <script>impress().init();</script>
+    </body>
+    
+</html>
